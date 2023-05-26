@@ -10,6 +10,11 @@ disp(c);
 h=[p' eye(n-k)];
 d_table = syndtable(h);
 r_c = input("enter the recived codeword :") ;
+if r_c == c
+    disp("code word is write");
+else
+    disp("error in code word");
+end
 s_b = rem(r_c * h',2);
 s_d=bi2de(s_b,"left-msb");
 e = d_table(s_d + 1, :);
